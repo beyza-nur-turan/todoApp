@@ -1,0 +1,110 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+/* index.css veya App.css dosyanıza ekleyin ya da yeni bir dosya oluşturun */
+@keyframes moveText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(200px); /* Yazının sağa doğru 200 piksel kaymasını sağlar */
+  }
+}
+
+/* Eğer yazı kalınlığını ve renklerini belirlemek isterseniz normal CSS kurallarını buraya ekleyebilirsiniz */
+@keyframes colorChange {
+  0% {
+    color: #023047;
+  }
+  30% {
+    color: #1e6091;
+  }
+
+  70% {
+    color: #1a759f;
+  }
+  100% {
+    color: #023047;
+  }
+}
+body{
+  margin: 0;
+  padding: 2rem;
+  background: linear-gradient(to bottom,  #f8f4f4, #023047);
+  font-size: 14;
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+ 
+}
+.formStyle {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 0.3rem;
+   box-shadow: 5px 5px 10px 10px rgba(52, 4, 16, 0.2);  
+  background-image: url('src/assets/white.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0);
+  opacity: 0.9;
+  
+}
+
+h1 {
+  text-align: center;
+  color: #911513;
+  animation: colorChange 2s infinite;
+}
+label {
+  display: block;
+  margin-bottom: 7px;
+  color: #3b3c3f;
+  font-weight: bold;
+}
+input[type="text"],
+input[type="date"],
+textarea {
+  font-weight: 600;
+  color: #023047;
+  margin: 0.8rem;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 0.15rem inset #ccc;
+  border-radius: 0.8rem;
+  background-color:#faf9f9;
+}
+input[type="radio"] {
+  margin: 0.4rem;
+}
+.buttonStyle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  padding: 12px 23px;
+  background-color: #023047;
+  color: #fff;
+  border: 2px groove #023047 ;
+  border-radius: 2rem;
+  cursor: pointer;
+  margin: 2px 6px 2px 10px;
+}
+/* .backButton{
+  max-width: 1%;
+  border: 50%;
+  font-size: 25;
+  text-align: center;
+} */
+button:hover {
+  background-color: #1e6091;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
